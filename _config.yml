@@ -14,8 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Wavether
+tagline: Stay curious
 description: >
-  Research, engineering, technologies, and business
+  My brain dump on research, engineering, technologies, and business topics
 url: "http://www.wavether.com" # the base hostname & protocol for your site
 github_username:  shushen
 
