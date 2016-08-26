@@ -16,9 +16,12 @@
 title: Wavether
 description: >
   Research, engineering, technologies, and business
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.wavether.com" # the base hostname & protocol for your site
 github_username:  shushen
+
+baseurl: "/"
+paginate: 5
+
 
 # Build settings
 markdown: kramdown
