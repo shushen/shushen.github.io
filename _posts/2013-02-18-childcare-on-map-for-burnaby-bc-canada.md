@@ -10,7 +10,7 @@ categories:
   - Misc.
 ---
 The data is pulled from [Fraser Health Authority](http://www.fraserhealth.ca/) and updated regularly.
-  
+
 Hope this would be helpful for parents in Burbay looking for child care.
-  
-<https://www.wavether.com/ChildcareBBY.html>
+
+<http://www.wavether.com/ChildcareBBY.html>

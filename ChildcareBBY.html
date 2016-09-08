@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Burnaby Child Daycare Map, British Columbia, Canada</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD9l8RrWBha0ZX8hjRPPXSdXj56b9ZCqbs&sensor=false">
+    </script>
+    <script type="text/javascript">
+
+	function codeAddress(owner,address,titlestr) {
+	geocoder = new google.maps.Geocoder();
+ 	geocoder.geocode( { 'address': address}, function(results, status) {
+	      	if (status == google.maps.GeocoderStatus.OK) {
+        		var marker = new google.maps.Marker({
+	        	    map: owner, 
+	        	    position: results[0].geometry.location,
+			    title: titlestr
+	        	});
+      		} else {
+        		alert("Geocode was not successful for the following reason: " + status);
+      		}
+    	});
+
+  	}
+
+      function addMarker(owner,lat,lng,titlestr) {
+      		var marker = new google.maps.Marker({
+        	    map: owner, 
+        	    position: new google.maps.LatLng(lat,lng),
+		    title: titlestr
+        	});
+      }
+
+      function initialize() {
+
+        var mapOptions = {
+          center: new google.maps.LatLng(49.265949,-122.990518),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+
+addMarker(map,49.2387668,-123.0160472,'_CCAA_ Bilingual Group Day Care\n(778) 322-0288\n311 In-Home Multi-Age Child Care\n3978 Brandon St, Burnaby');
+addMarker(map,49.2326468,-122.9534508,'2nd Home Bilingual Child Care\n(604) 522-6615\n304 Family Child Care\n6200 Buckingham Dr, Burnaby');
+addMarker(map,49.2605708,-122.9410584,'A Little Star Day Care Centre\n(604) 518-6434\n304 Family Child Care\n7760 Lawrence Dr, Burnaby');
+addMarker(map,49.2836408,-122.9877532,'A Perfect Circle Family Childcare\n(778) 938-4310\n304 Family Child Care\n75 Springer Ave, Burnaby');
+addMarker(map,49.2270156,-122.9647634,'A Plus Family Daycare Center\n(604) 288-1778\n311 In-Home Multi-Age Child Care\n6330 Sperling St, Burnaby');
+addMarker(map,49.2637058,-122.9739606,'A Tree House Daycare Centre\n(778) 997-2666\n304 Family Child Care\n6100 Broadway, Burnaby');
+addMarker(map,49.2277634,-122.9824267,'A & B Family Day Care\n(778) 995-2628\n311 In-Home Multi-Age Child Care\n6209 Elgin Ave, Burnaby');
+addMarker(map,49.2261644,-122.9857478,'A & C Family Daycare\n(604) 438-0537\n304 Family Child Care\n5382 Irving St, Burnaby');
+addMarker(map,49.2728835,-123.0019804,'ABC Family Daycare\n(604) 291-9630\n304 Family Child Care\n6390 Charles St, Burnaby');
+addMarker(map,49.2519152,-122.9817369,'Adore Child Care Ltd.\n(604) 299-6866\n310 Multi-Age Child Care\n5589 Hardwick St, Burnaby');
+addMarker(map,49.2106338,-123.0067963,'Advantage Preschool\n(604) 435-1263\n303 Preschool\nRoom 7 - 4340 Carson St, Burnaby');
+addMarker(map,49.2138112,-123.0165782,'Adventures Daycare\n(604) 565-1957\n310 Multi-Age Child Care\n7749 Kaymar Dr, Burnaby');
+addMarker(map,49.2170831,-122.9465084,'Agape Licensed Day Care\n(604) 516-8388\n311 In-Home Multi-Age Child Care\n7348 16th Ave, Burnaby');
+addMarker(map,49.2570847,-122.9832699,'Alysh Family Day Care\n(604) 299-8687\n304 Family Child Care\n5490 Manor St, Burnaby');
+addMarker(map,49.2285649,-122.9647611,'Amy_s Family Day Care\n(604) 715-5598\n304 Family Child Care\n6088 Sperling Ave, Burnaby');
+addMarker(map,49.2855303,-123.0046650,'Angel Family Child Care\n(604) 294-8218\n304 Family Child Care\n4439 Oxford St, Burnaby');
+addMarker(map,49.2211068,-122.9652786,'Angel Wings Daycare Center\n(604) 551-6090\n304 Family Child Care\n6468 Elwell St, Burnaby');
+addMarker(map,49.2283886,-122.9175843,'Angela Family Child Care Centre\n(604) 524-0298\n304 Family Child Care\n8404 13th Ave, Burnaby');
+addMarker(map,49.2156209,-122.9827398,'Angels Playhouse Infant & Toddler Child Care Centre\n(604) 436-3865\n301 Group Child Care (under 36 months)\n103 - 7339 MacPherson Ave, Burnaby');
+addMarker(map,49.2346628,-122.9479231,'Angels Playhouse Multi-Age Child Care Centre\n(604) 517-3866\n310 Multi-Age Child Care\n7893 Stanley St, Burnaby');
+addMarker(map,49.2648304,-122.9645649,'Anny_s Happy Planet\n(778) 829-5966\n304 Family Child Care\n2150 Sperling Ave, Burnaby');
+addMarker(map,49.2214210,-123.0031838,'Apple Island Child Care Centre\n(604) 862-6308\n304 Family Child Care\n6859 Dow Ave, Burnaby');
+addMarker(map,49.2371950,-122.9489932,'Apple Tree Family Daycare\n(604) 515-7503\n311 In-Home Multi-Age Child Care\n7924 Nursery St, Burnaby');
+addMarker(map,49.2570754,-123.0139326,'Astro Childcare\n(604) 438-8585\n301 Group Child Care (under 36 months)\n4108 Manor St, Burnaby');
+addMarker(map,49.2734202,-122.9705029,'Aubrey Daycare Centre\n(778) 228-1379\n301 Group Child Care (under 36 months)\n6409 Aubrey St, Burnaby');
+addMarker(map,49.2753902,-122.9646640,'Aubrey Daycare Centre\n(778) 228-1379\n310 Multi-Age Child Care\n949 Sperling Ave, Burnaby');
+addMarker(map,49.2754225,-122.9646643,'Aubrey Daycare Centre\n(778) 228-1379\n301 Group Child Care (under 36 months)\n947 Sperling Ave, Burnaby');
+addMarker(map,49.2138850,-123.0011357,'Azure Family Daycare\n(778) 995-8663\n304 Family Child Care\n4546 Neville St, Burnaby');
+addMarker(map,49.2563143,-123.0120504,'Baby Smart Child Care Centre\n(604) 306-6698\n304 Family Child Care\n4107 Dominion St, Burnaby');
+addMarker(map,49.2515141,-123.0045199,'BCIT Student Association Childcare Centre\n(604) 432-8600\n302 Group Child Care (30 months to school age)\n3700 Willingdon Ave, Burnaby');
+addMarker(map,49.2286693,-122.9403491,'Bear_s House Child Care\n(604) 721-7488\n301 Group Child Care (under 36 months)\n7868 Elwell St, Burnaby');
+addMarker(map,49.2152912,-122.9346629,'Bear_s House Daycare At 10th\n(778) 397-8388\n310 Multi-Age Child Care\n7557 10th Ave, Burnaby');
+addMarker(map,49.2214161,-122.9719420,'Bear Paws Child Care\n(778) 858-5098\n301 Group Child Care (under 36 months)\n6842 Gilley Ave, Burnaby');
+addMarker(map,49.2353896,-122.9064699,'Bee Daycare\n(604) 522-0328\n311 In-Home Multi-Age Child Care\n8910 Monroe Ave, Burnaby');
+addMarker(map,49.2174810,-122.9939781,'Bee House Montessori Day Care I\n(604) 433-9769\n302 Group Day Care >30 mos, 305 Group Child Care (School Age)\n7283 Nelson Ave, Burnaby');
+addMarker(map,49.2497346,-123.0179971,'Bee House Montessori Day Care II\n(604) 433-9760\n302 Group Day Care >30 mos\n3855 Sunset St, Burnaby');
+addMarker(map,49.2266836,-122.9208719,'Beehive Christian Preschool\n(604) 521-6601\n303 Preschool (30 months to school age)\n8255 13th Ave, Burnaby');
+addMarker(map,49.2173793,-122.9371727,'Betty_s Daycare\n(604) 522-1543\n304 Family Child Care\n7753 Davies St, Burnaby');
+addMarker(map,49.2714827,-122.9503952,'Birchwood Day Care Centre\n(604) 420-4426\n302 Group Day Care >30 mos\n7328 Dunvegan Ct, Burnaby');
+addMarker(map,49.2247046,-122.9841003,'Blessed Family Child Care\n(604) 419-0749\n304 Family Child Care\n6489 Denbigh Ave, Burnaby');
+addMarker(map,49.2747955,-123.0190504,'Blue Bells Family Childcare\n(604) 291-9578\n304 Family Child Care\n3875 Napier St, Burnaby');
+addMarker(map,49.2259649,-122.9573640,'Boo Boo Daycare\n(778) 938-8871\n304 Family Child Care\n7370 Morley St, Burnaby');
+addMarker(map,49.2236587,-122.9678421,'Brantford Montessori Childcare\n(604) 249-4568\n310 Multi-Age Child Care\n6619 Brantford Ave, Burnaby');
+addMarker(map,49.2698261,-122.9920966,'Brentwood Nursery School\n(604) 291-7203\n303 Preschool\n1455A Delta Ave, Burnaby');
+addMarker(map,49.2698261,-122.9920966,'Brentwood Park Plus\n(604) 294-6060\n305 Group Child Care (School Age)\nRoom B - 1455 Delta Ave, Burnaby');
+addMarker(map,49.2151185,-122.9996795,'Bright Star Montessori School Inc\n(604) 790-3503\n302 Group Day Care >30 mos\n7591 Gray Ave, Burnaby');
+addMarker(map,49.2617862,-122.9666899,'Broadway Daycare Centre\n(604) 444-4706\n311 In-Home Multi-Age Child Care\n6644 Broadway, Burnaby');
+addMarker(map,49.2301838,-122.9489990,'Buckingham Heights Child Care\n(604) 544-3504\n304 Family Child Care\n7688 Morley Dr, Burnaby');
+addMarker(map,49.2148236,-122.9955762,'Bud to Bloom Family Childcare\n(604) 451-1177\n304 Family Child Care\n4808 Rumble St, Burnaby');
+addMarker(map,49.2672549,-123.0088375,'Building Block Daycare\n(604) 437-5985\n304 Family Child Care\n3430 Douglas Rd, Burnaby');
+addMarker(map,49.2627140,-122.9102857,'Bunky Bear Daycare\n(604) 444-1016\n304 Family Child Care\n83 - 8750 Maple Grove Cr, Burnaby');
+addMarker(map,49.2262857,-122.9915484,'Burnaby French Language Playschool\n(604) 432-1323\n303 Preschool\n6060 Marlborough Ave, Burnaby');
+addMarker(map,49.2296176,-122.9451326,'Burnaby Lakeview Preschool\n(604) 522-5515\n303 Preschool (30 months to school age)\n7777 Mayfield St, Burnaby');
+addMarker(map,49.2488309,-122.9747892,'Burnaby Montessori School\n(604) 298-1661\n303 Preschool, 302 Group Child Care (30 months to school age)\n3905 Norland Ave, Burnaby');
+addMarker(map,49.2413344,-123.0108320,'Burnaby Rainbow Preschool Association\n(604) 439-0033\n303 Preschool (30 months to school age)\n4781 Parkwood Ave, Burnaby');
+addMarker(map,49.2159432,-122.9847336,'Burnaby South Child Care Centre\n(604) 257-4465\n301 Group Day Care <36 mos\n5455 Rumble St, Burnaby');
+addMarker(map,49.2159432,-122.9847336,'Burnaby South Childminding\n(604) 659-2234\n312 Child-minding\n5455 Rumble St, Burnaby');
+addMarker(map,49.2589752,-122.8950748,'Burquitlam Childcare\n(604) 421-2919\n305 Group Child Care (School Age)\n9847 Lyndhurst St, Burnaby');
+addMarker(map,49.2258683,-122.9536426,'C J_s Family Daycare\n(604) 525-6497\n304 Family Child Care\n7429 Imperial St, Burnaby');
+addMarker(map,49.2447480,-122.9789373,'Cambridge Montessori Children_s House\n(604) 299-5676\n302 Group Child Care (30 months to school age)\n4415 Fitzgerald Ave, Burnaby');
+addMarker(map,49.2534356,-122.8945436,'Cameron Child Care Centre\n(604) 420-1414\n301 Group Child Care (under 36 months), 302 Group Child Care (30 months to school age)\n9838 Cameron St, Burnaby');
+addMarker(map,49.2525976,-122.8986953,'Cameron YMCA Kids Club\n(604) 421-6560\n305 Group Child Care (School Age)\nRoom 7 - 9540 Erickson Dr, Burnaby');
+addMarker(map,49.2220291,-122.9389708,'Canadaway Family Daycare Centre\n(604) 808-0809\n304 Family Child Care\n7671 17th Ave, Burnaby');
+addMarker(map,49.2268494,-122.9517328,'Canadian Lilies Day Care\n(604) 522-7912\n304 Family Child Care\n7498 Imperial St, Burnaby');
+addMarker(map,49.2816418,-122.9804630,'Capitol Hill YMCA Kids Club\n(604) 294-3013\n305 Out of School Care\n350 Holdom Ave, Burnaby');
+addMarker(map,49.2429964,-122.9091423,'Cariboo Hill Out of School Care\n(604) 525-7311\n305 Group Child Care (School Age)\n7195 Cariboo Rd, Burnaby');
+addMarker(map,49.2186225,-122.9389413,'Caring Daycare\n(604) 525-9580\n304 Family Child Care\n7544 14th Ave, Burnaby');
+addMarker(map,49.2456386,-123.0197998,'Cascade Heights YMCA Kid_s Club\n(604) 802-7864\n305 Group Child Care (School Age)\n4343 Smith Ave, Burnaby');
+addMarker(map,49.2747633,-122.9794843,'Caterpillar Family Day Care\n(604) 294-1991\n304 Family Child Care\n1110 Dunlop Ave, Burnaby');
+addMarker(map,49.2128716,-122.9790794,'Clinton Neighbourhood Care\n(604) 435-1222\n305 Group Child Care (School Age)\n5858 Clinton St, Burnaby');
+addMarker(map,49.2432532,-122.9706662,'Core Education & Fine Arts\n(604) 299-2373\n301 Group Day Care <36 mos, 302 Group Day Care >30 mos\n4970 Canada Way, Burnaby');
+addMarker(map,49.2324389,-123.0224261,'Core Education & Fine Arts - Kingsway\n(604) 568-8808\n301 Group Child Care (under 36 months), 302 Group Child Care (30 months to school age)\n4021 Kingsway, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Crackers)\n(778) 782-4759\n305 Group Child Care (School Age)\n8888 University Dr, Burnaby');
+addMarker(map,49.2284918,-122.9289992,'Creative Minds Child Care Centre\n(604) 525-5778\n311 In-Home Multi-Age Child Care\n8144 18th Ave, Burnaby');
+addMarker(map,49.2269688,-122.9824191,'Dandelion Daycare Centre\n(604) 566-2666\n311 In-Home Multi-Age Child Care\n6270 Elgin Ave, Burnaby');
+addMarker(map,49.2165789,-123.0039166,'Deaf Children_s Society of BC\n(604) 430-5415\n303 Preschool (30 months to school age)\n4446 Watling St, Burnaby');
+addMarker(map,49.2384837,-122.9648823,'Deer Lake Preschool\n(604) 789-9381\n303 Preschool (30 months to school age)\n5135 Sperling Ave, Burnaby');
+addMarker(map,49.2004769,-122.9662197,'Discovery Childcare Centre\n(604) 522-2928\n302 Group Child Care (30 months to school age)\n49 - 7411 12th Ave, Burnaby');
+addMarker(map,49.2490053,-122.9806933,'Douglas Road Neighbourhood Care\n(604) 298-7094\n305 Group Child Care (School Age)\n4861 Canada Way, Burnaby');
+addMarker(map,49.2306688,-122.9207884,'Dreams of Harmony Child care\n(604) 525-8362\n310 Multi-Age Child Care\n7533 Wright St, Burnaby');
+addMarker(map,49.2387802,-123.0183228,'Eden Family Childcare Centre\n(604) 709-6218\n304 Family Child Care\n3888 Brandon St, Burnaby');
+addMarker(map,49.2236854,-122.9406049,'Edmonds Childminding\n(604) 500-0492\n312 Child-minding\n7355 Canada Way, Burnaby');
+addMarker(map,49.2322500,-122.9889243,'Educare Children_s Centre\n(604) 808-7623\n310 Multi-Age Child Care\n5715 Royal Oak Ave, Burnaby');
+addMarker(map,49.2211071,-122.9654035,'Elsa_s Family Child Care\n(604) 563-3977\n304 Family Child Care\n6430 Elwell St, Burnaby');
+addMarker(map,49.2148378,-123.0060926,'Fair Haven Children_s Centre (Burnaby)\n(604) 437-0171\n302 Group Day Care >30 mos, 301 Group Day Care <36 mos\n4375 Rumble St, Burnaby');
+addMarker(map,49.2747713,-122.9700787,'Faith Lutheran Preschool\n(604) 299-3915\n303 Preschool (30 months to school age)\n1005 Kensington Ave, Burnaby');
+addMarker(map,49.2440268,-123.0221385,'Ferris Wheel Family Childcare\n(604) 437-7721\n304 Family Child Care\n3708 Wakefield Ct, Burnaby');
+addMarker(map,49.2648871,-122.9150563,'Forest Grove Childcare Centre\n(604) 339-6340\n302 Group Child Care (30 months to school age), 305 Group Child Care (School Age), 303 Preschool (30 months to school age), 301 Group Child Care (under 36 months)\n#36 - 8650 Cinnamon Dr, Burnaby');
+addMarker(map,49.2023218,-122.9662083,'Fraser Montessori Daycare\n(604) 551-0781\n310 Multi-Age Child Care\n6269 14th Ave, Burnaby');
+addMarker(map,49.2773028,-122.9834851,'Funshine Family Daycare\n(604) 299-9256\n304 Family Child Care\n5517 Union St, Burnaby');
+addMarker(map,49.2842672,-123.0140979,'Gilmore Preschool\n(604) 618-4333\n303 Preschool (30 months to school age)\nRoom 106 - 50 Gilmore Ave S, Burnaby');
+addMarker(map,49.2429512,-122.9855574,'Gilpin Neighbourhood Care\n(604) 298-5355\n303 Preschool (30 months to school age), 305 Group Child Care (School Age)\n5433 Ivar Pl, Burnaby');
+addMarker(map,49.2273960,-122.9194628,'Gingerbread Lane\n(604) 521-6857\n304 Family Child Care\n8331 13th Ave, Burnaby');
+addMarker(map,49.2639245,-122.9645875,'Golden Apple Daycare\n(604) 781-1516\n311 In-Home Multi-Age Child Care\n2181 Sperling Ave, Burnaby');
+addMarker(map,49.2219471,-122.9639695,'Good Friends Family Childcare\n(604) 544-1370\n304 Family Child Care\n6727 Imperial St, Burnaby');
+addMarker(map,49.2174810,-122.9939781,'Grace Lutheran Nursery School\n(604) 433-5155\n303 Preschool\n7283 Nelson Ave, Burnaby');
+addMarker(map,49.2372443,-122.9063831,'Grace Montessori Daycare\n(604) 777-1008\n311 In-Home Multi-Age Child Care\n7588 Cariboo Rd, Burnaby');
+addMarker(map,49.2218774,-122.9352017,'Graham Montessori School\n(604) 522-6116\n302 Group Child Care (30 months to school age), 303 Preschool (30 months to school age)\n7772 Graham Ave, Burnaby');
+addMarker(map,49.2263635,-122.9206593,'Graham Montessori School (OOS)\n(778) 397-0191\n305 Group Child Care (School Age)\n8260 13th Ave, Burnaby');
+addMarker(map,49.2880146,-122.9875044,'Green Hill Family Daycare\n(604) 570-0353\n304 Family Child Care\n439 N. Springer Ave, Burnaby');
+addMarker(map,49.2369397,-123.0073682,'Green Star Childcare\n(604) 721-3649\n311 In-Home Multi-Age Child Care\n4365 Burke St, Burnaby');
+addMarker(map,49.2203969,-122.9459978,'Growing Minds Child Care Centre\n(778) 387-0856\n311 In-Home Multi-Age Child Care\n7456 - 19th Ave, Burnaby');
+addMarker(map,49.2188556,-122.9975719,'Hand in Hand Childcare\n(778) 288-8026\n311 In-Home Multi-Age Child Care\n7150 Waverly Ave, Burnaby');
+addMarker(map,49.2090039,-122.9598067,'Hanna Court Children_s Centre\n(604) 522-2282\n302 Group Day Care >30 mos\n7521 Hanna Ct, Burnaby');
+addMarker(map,49.2090039,-122.9598067,'Hanna Court Children_s Centre (Under 36 Months)\n(604) 522-2282\n301 Group Day Care <36 mos\n7521 Hanna Ct, Burnaby');
+addMarker(map,49.2733889,-122.9592909,'Happy Face Family Child Care\n(604) 435-0880\n304 Family Child Care\n6965 Aubrey St, Burnaby');
+addMarker(map,49.2129187,-122.9681474,'Happy Feet Childcare Centre\n(604) 808-7623\n301 Group Child Care (under 36 months)\n6550 Clinton St, Burnaby');
+addMarker(map,49.2196173,-123.0014086,'Happy Tree Children_s Centre\n(604) 282-7978\n311 In-Home Multi-Age Child Care\n7065 Frederick Ave, Burnaby');
+addMarker(map,49.2270225,-122.9198126,'Harmony Family Childcare\n(604) 524-2499\n304 Family Child Care\n7750 Newcombe St, Burnaby');
+addMarker(map,49.2189899,-122.9528646,'Highgate Preschool\n(604) 518-0954\n303 Preschool (30 months to school age)\n7135 Walker Ave, Burnaby');
+addMarker(map,49.2106338,-123.0067963,'Hillview Parent Participation Preschool\n(604) 431-0119\n303 Preschool\n#8 - 4340 Carson St, Burnaby');
+addMarker(map,49.2612745,-122.9469092,'Home Away From Home Childcare\n(604) 789-9856\n311 In-Home Multi-Age Child Care\n7480 Broadway, Burnaby');
+addMarker(map,49.2144039,-123.0027023,'House Of Angels\n(604) 434-2693\n311 In-Home Multi-Age Child Care\n7610 Dow Ave, Burnaby');
+addMarker(map,49.2418853,-122.9864190,'In-Joy Montessori Children_s Center\n(604) 432-9727\n301 Group Day Care <36 mos\n5375 Gilpin St, Burnaby');
+addMarker(map,49.2168439,-122.9633708,'In-Joy Montessori Children_s Centre\n(778) 688-4585\n302 Group Day Care >30 mos\n6808 Beresford St, Burnaby');
+addMarker(map,49.2258097,-122.9971576,'Jellybean Park International Campus\n(604) 439-3390\n303 Preschool\n452 - 4800 Kingsway, Burnaby');
+addMarker(map,49.2283024,-122.9993737,'Jellybean Park Junior Campus\n(604) 431-8850\n302 Group Day Care >30 mos\n2110 - 4700 Kingsway, Burnaby');
+addMarker(map,49.2258097,-122.9971576,'Jellybeans\n(604) 431-8870\n303 Preschool, 308 Occasional Child Care\n369 - 4800 Kingsway, Burnaby');
+addMarker(map,49.2181413,-123.0030919,'Jingle Bells Day Care\n(778) 866-2866\n304 Family Child Care\n7250 Dow Ave, Burnaby');
+addMarker(map,49.2765172,-123.0088698,'Keekoz Daycare\n(604) 294-9969\n304 Family Child Care\n4290 Venables St, Burnaby');
+addMarker(map,49.2688251,-122.9978974,'Kelli_s Little Angels\n(604) 294-4093\n304 Family Child Care\n4652 Brentlawn Dr, Burnaby');
+addMarker(map,49.2697508,-122.9807808,'Kensington Montessori Child Care\n(604) 298-5951\n310 Multi-Age Child Care\n1600 Holdom Ave, Burnaby');
+addMarker(map,49.2354133,-122.9492714,'Kidaroo Daycare\n(604) 524-8741\n304 Family Child Care\n7876 Allman St, Burnaby');
+addMarker(map,49.2269253,-122.9272807,'Kids Link Out Of School Care\n(604) 664-8260\n305 Group Child Care (School Age)\n7502 2nd St, Burnaby');
+addMarker(map,49.2324594,-122.9168958,'Kidz Zone\n(604) 525-8546\n301 Group Child Care (under 36 months)\n8546 16th Ave, Burnaby');
+addMarker(map,49.2324389,-123.0224261,'Kingsway Christian Children_s Centre\n(604) 437-3393\n302 Group Day Care >30 mos\n4061 Kingsway, Burnaby');
+addMarker(map,49.2324389,-123.0224261,'Kingsway Christian Children_s Centre - Clubhouse\n(604) 437-3393\n305 Group Child Care (School Age), 303 Preschool (30 months to school age)\n4505 Kingsway, Burnaby');
+addMarker(map,49.2738368,-123.0142544,'Kitchener Out Of School Care\n(604) 291-1953\n305 Group Child Care (School Age)\n1351 Gilmore Ave, Burnaby');
+addMarker(map,49.2706857,-122.9670254,'KJ Colours Childcare\n(604) 320-0555\n304 Family Child Care\n6595 Grant St, Burnaby');
+addMarker(map,49.2300032,-122.9857440,'Kool Catz Family Child Care\n(604) 968-6154\n304 Family Child Care\n#48 - 5955 Oakdale Rd, Burnaby');
+addMarker(map,49.2299967,-122.9071131,'Kristine_s Family Daycare\n(604) 527-0559\n304 Family Child Care\n8643 10th Ave, Burnaby');
+addMarker(map,49.2115002,-122.9414620,'Learning House Family Child Care\n(778) 397-8326\n304 Family Child Care\n7287 10th Ave, Burnaby');
+addMarker(map,49.2380642,-123.0187793,'Lil_ Monkeys Family Childcare\n(604) 451-7571\n304 Family Child Care\n3842 Hertford St, Burnaby');
+addMarker(map,49.2510765,-122.9843671,'Lillooet Family Child Care\n(604) 433-6789\n304 Family Child Care\n3762 Jambor Ct, Burnaby');
+addMarker(map,49.2239168,-123.0006988,'Linda_s Family Daycare\n(604) 288-0601\n304 Family Child Care\n5 - 6797 Dow Ave, Burnaby');
+addMarker(map,49.2774487,-123.0126966,'Lisa_s Happy Family Child Care\n(604) 221-2282\n304 Family Child Care\n4146 Union St, Burnaby');
+addMarker(map,49.2408624,-122.9806461,'Little Children Family Daycare\n(604) 431-1918\n304 Family Child Care\n5655 Cedarwood St, Burnaby');
+addMarker(map,49.2448346,-123.0213771,'Little Eden Child Care Center\n(604) 565-3376\n311 In-Home Multi-Age Child Care\n3755 Fir St, Burnaby');
+addMarker(map,49.2293206,-122.9568306,'Little Feet Childcare Centre\n(604) 355-9916\n311 In-Home Multi-Age Child Care\n7461 Stanley St, Burnaby');
+addMarker(map,49.2572992,-123.0201830,'Little Friends Playday Childcare\n(604) 565-0247\n311 In-Home Multi-Age Child Care\n3787 Manor St, Burnaby');
+addMarker(map,49.2300032,-122.9857440,'Little Hearts Family Child Care\n(604) 434-2640\n304 Family Child Care\n#47 - 5955 Oakdale Rd, Burnaby');
+addMarker(map,49.2757303,-123.0202418,'Little House Multi Age Child Care\n(604) 298-4166\n310 Multi-Age Child Care\n3849 Parker St, Burnaby');
+addMarker(map,49.2294069,-123.0097204,'Little Penguin Family Child Care\n(778) 895-4018\n304 Family Child Care\n114 - 6044 Wilson Ave, Burnaby');
+addMarker(map,49.2291898,-122.9678340,'Little Stars Daycare\n(604) 430-9734\n311 In-Home Multi-Age Child Care\n6026 Brantford Ave, Burnaby');
+addMarker(map,49.2168316,-122.9640022,'Little Tumblers Family Child Care\n(604) 516-0883\n304 Family Child Care\n101 - 7312 Magnolia Terr, Burnaby');
+addMarker(map,49.2732587,-122.9607012,'Lochdale Neighbourhood Care\n(604) 421-0401\n305 Group Child Care (School Age)\n6990 Aubrey St, Burnaby');
+addMarker(map,49.2275086,-122.9450458,'Love Kids Family Childcare\n(604) 521-4027\n311 In-Home Multi-Age Child Care\n6840 Canada Way, Burnaby');
+addMarker(map,49.2679958,-122.9831045,'Love & Joy Childcare\n(604) 298-2281\n311 In-Home Multi-Age Child Care\n5530 Halifax St, Burnaby');
+addMarker(map,49.2547776,-122.9082109,'Lyndhurst Creative Play Preschool\n(604) 421-6113\n303 Preschool (30 months to school age)\n3290 Ganymede Dr, Burnaby');
+addMarker(map,49.2674417,-123.0078359,'Madison Children_s Centre\n(604) 205-7385\n301 Group Day Care <36 mos, 302 Group Day Care >30 mos\n4397 Buchanan St, Burnaby');
+addMarker(map,49.2284630,-122.9290538,'Maple Tree Home\n(604) 522-1165\n304 Family Child Care\n8138 18th Ave, Burnaby');
+addMarker(map,49.2262857,-122.9915484,'Marlborough Neighbourhood Care\n(604) 434-1338\n305 Out of School Care\n6060 Marlborough Ave, Burnaby');
+addMarker(map,49.2219346,-123.0004255,'Maywood Neighbourhood Care\n(604) 431-0484\n305 Group Child Care (School Age)\n4567 Imperial St, Burnaby');
+addMarker(map,49.2042472,-122.9683453,'Momonoki (Peach Tree) Family Daycare\n(604) 553-4401\n304 Family Child Care\n6142 Marine Dr, Burnaby');
+addMarker(map,49.2297591,-122.9643210,'Montessori Minds Childcare Centre Ltd.\n(778) 837-9496\n302 Group Child Care (30 months to school age)\n5960 Walker Ave, Burnaby');
+addMarker(map,49.2259171,-122.9574579,'Morley Child Care Centre\n(604) 659-2235\n302 Group Child Care (30 months to school age), 305 Group Child Care (School Age), 303 Preschool (30 months to school age)\n7355 Morley St, Burnaby');
+addMarker(map,49.2718212,-122.9549699,'Morning Star Family Child Care\n(604) 325-9996\n304 Family Child Care\n1345 Aldrin Pl, Burnaby');
+addMarker(map,49.2680278,-123.0033051,'Mrs Dolling_s Family Daycare\n(604) 299-7111\n304 Family Child Care\n6050 Halifax St, Burnaby');
+addMarker(map,49.2354246,-122.9035258,'Ms Linda_s Place\n(778) 397-0647\n311 In-Home Multi-Age Child Care\n9055 Holmes St, Burnaby');
+addMarker(map,49.2301041,-122.9606009,'Munchkin Land Family Daycare\n(604) 522-3205\n311 In-Home Multi-Age Child Care\n6084 Malvern Ave, Burnaby');
+addMarker(map,49.2219514,-123.0087344,'My First Blanket\n(604) 433-2314\n304 Family Child Care\n4306 Imperial St, Burnaby');
+addMarker(map,49.2316472,-122.9944448,'Nelson Avenue Daycare\n(604) 439-9263\n305 Group Child Care (School Age), 302 Group Day Care >30 mos\n5825 Nelson Ave, Burnaby');
+addMarker(map,49.2198175,-122.9351992,'New Look Daycare\n(778) 216-0254\n311 In-Home Multi-Age Child Care\n7738 14th Ave, Burnaby');
+addMarker(map,49.2213441,-122.9976152,'New Star Child Care\n(604) 283-1686\n304 Family Child Care\n6890 Waverley Ave, Burnaby');
+addMarker(map,49.2595615,-122.8930322,'North Rd Montessori Child Care\n(604) 444-3787\n302 Group Child Care (30 months to school age)\n2781 North Rd, Burnaby');
+addMarker(map,49.2573548,-122.9461195,'Orchid Family Day Care\n(604) 420-3729\n304 Family Child Care\n7485 Lawrence Dr, Burnaby');
+addMarker(map,49.2085309,-122.9844186,'Pamela_s Little Promises\n(604) 434-7352\n304 Family Child Care\n5469 Patrick St, Burnaby');
+addMarker(map,49.2698164,-122.9757207,'Parkcrest Children_s Centre\n(604) 294-6224\n305 Group Child Care (School Age), 303 Preschool\n6040 Winch St, Burnaby');
+addMarker(map,49.2393325,-123.0196274,'Parkview Childrens Centre\n(604) 437-3211\n305 Group Child Care (School Age)\n5010 Smith Ave, Burnaby');
+addMarker(map,49.2263053,-122.9166536,'Parkwood Daycare\n(604) 521-8748\n302 Group Child Care (30 months to school age)\n8350 11th Ave, Burnaby');
+addMarker(map,49.2698321,-122.9921026,'Petits Genies\n(604) 788-0901\n302 Group Child Care (30 months to school age)\n1600 Delta Ave, Burnaby');
+addMarker(map,49.2339160,-122.9075592,'Pied Piper Preschool\n(604) 524-0833\n303 Preschool (30 months to school age)\n8757 Armstrong Ave, Burnaby');
+addMarker(map,49.2157078,-122.9339599,'Pinocchio Multi-Age Daycare\n(604) 524-6422\n310 Multi-Age Child Care\n7595 10th Ave, Burnaby');
+addMarker(map,49.2347900,-123.0199015,'Play N Learn Family Daycare\n(604) 617-8355\n304 Family Child Care\n3839 Thurston St, Burnaby');
+addMarker(map,49.2756578,-123.0086366,'Puddle Jumpers Day Care\n(604) 294-4413\n302 Group Day Care >30 mos, 305 Out of School Care\n4304 Parker St, Burnaby');
+addMarker(map,49.2789437,-122.9520945,'Puddle Splashers Child Care Society\n(604) 291-2410\n302 Group Day Care >30 mos, 303 Preschool, 305 Out of School Care\n7231 Frances St, Burnaby');
+addMarker(map,49.2313998,-122.9488740,'Pumpkinutters Daycare\n(778) 397-7099\n304 Family Child Care\n7835 Welsley Dr, Burnaby');
+addMarker(map,49.2536608,-123.0234843,'Reach for the Stars Montessori\n(604) 688-7827\n301 Group Child Care (under 36 months), 302 Group Child Care (30 months to school age)\n3440 Boundary Rd, Burnaby');
+addMarker(map,49.2308388,-122.9103611,'Renee_s Daycare\n(604) 544-4230\n311 In-Home Multi-Age Child Care\n8613 12th Ave, Burnaby');
+addMarker(map,49.2752179,-122.9483505,'Rhema Childcare Centre Ltd\n(604) 299-4817\n301 Group Child Care (under 36 months)\n7381 Curtis St, Burnaby');
+addMarker(map,49.2106338,-123.0067963,'Riverway West Childminding\n(604) 500-0492\n312 Child-minding\n6 - 4340 Carson St, Burnaby');
+addMarker(map,49.2828222,-123.0059892,'Rosser Preschool\n(604) 526-2522\n303 Preschool (30 months to school age)\n4375 Pandora St, Burnaby');
+addMarker(map,49.2828333,-123.0059461,'Rosser YMCA Kids Club\n(604) 297-0979\n305 Group Child Care (School Age)\nRoom 7 - 4375 Pandora St, Burnaby');
+addMarker(map,49.2087325,-123.0227775,'Schmoeller Family Day Care\n(604) 430-4171\n304 Family Child Care\n3757 Banting Pl, Burnaby');
+addMarker(map,49.2670887,-122.9889204,'Schoolhouse Montessori Daycare Ltd\n(604) 294-2671\n303 Preschool (30 months to school age)\n101 - 1950 Bellwood Ave, Burnaby');
+addMarker(map,49.2340629,-123.0068108,'Seeds Family Day Care\n(604) 435-0846\n304 Family Child Care\n4378 Sardis St, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Bright Clouds)\n(778) 782-6781\n301 Group Day Care <36 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Espuleta)\n(778) 782-4033\n301 Group Day Care <36 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Kahpoo Room)\n(778) 782-4750\n301 Group Day Care <36 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Les Petits Room)\n(778) 782-4460\n301 Group Day Care <36 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Los Ninos Room)\n(778) 782-4034\n301 Group Day Care <36 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Malaika Toddler Centre)\n(778) 782-4757\n301 Group Day Care <36 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Morningside Centre)\n(778) 782-4758\n302 Group Day Care >30 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Nanitsh Centre)\n(778) 782-4032\n302 Group Day Care >30 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Skyfire)\n(778) 782-5372\n302 Group Day Care >30 mos\n8888 University Dr, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Voyageurs Room)\n(778) 782-4138\n305 Group Child Care (School Age)\n8888 University Dr, Burnaby');
+addMarker(map,49.2734191,-122.9704160,'Sheila_s Family Daycare\n(604) 294-4011\n304 Family Child Care\n6470 Aubrey St, Burnaby');
+addMarker(map,49.2540391,-123.0230794,'Sir Andrew_s MRT Childcare - Boundary Centre\n(604) 437-6942\n302 Group Child Care (30 months to school age)\n3410 Boundary Rd, Burnaby');
+addMarker(map,49.2220105,-122.9790842,'Sir Andrew_s MRT Childcare - Imperial Centre\n(604) 437-8252\n302 Group Child Care (30 months to school age), 303 Preschool (30 months to school age), 305 Group Child Care (School Age)\n5855 Imperial St, Burnaby');
+addMarker(map,49.2211512,-122.9326837,'Small Bear Day Care\n(604) 540-6432\n304 Family Child Care\n7827 14th Ave, Burnaby');
+addMarker(map,49.2642421,-122.9658380,'Smarty_s Childcare\n(778) 549-9326\n305 Group Child Care (School Age)\n2188 Dauphin Pl, Burnaby');
+addMarker(map,49.2461512,-122.9746303,'Smilestones Junior Kindergarten Inc\n(604) 298-9006\n302 Group Child Care (30 months to school age)\n4162 Norland Ave, Burnaby');
+addMarker(map,49.2165789,-123.0039166,'South Slope Out of School Care\n(604) 419-0806\n305 Group Child Care (School Age)\n4446 Watling St, Burnaby');
+addMarker(map,49.2793056,-122.9077435,'SFU Childcare Society (Kindergarten Kids)\n(778) 782-3368\n305 Group Child Care (School Age)\n8888 University Dr, Burnaby');
+addMarker(map,49.2617410,-122.9575745,'Spring Childcare\n(604) 417-7153\n311 In-Home Multi-Age Child Care\n7050 Broadway, Burnaby');
+addMarker(map,49.2247930,-122.9219723,'Starlight Child Care Centre\n(778) 389-9669\n311 In-Home Multi-Age Child Care\n8173 12th Avenue, Burnaby');
+addMarker(map,49.2591802,-122.9041622,'Stoney Creek YMCA Kids Club\n(604) 421-0555\n305 Group Child Care (School Age)\n2740 Beaverbrook Cr, Burnaby');
+addMarker(map,49.2115804,-122.9548686,'Stride Avenue Neighbourhood Care\n(604) 527-0444\n305 Group Child Care (School Age)\n7014 Stride Ave, Burnaby');
+addMarker(map,49.2233974,-122.9398589,'St. Alban_s The Martyr Day Care\n(604) 522-6228\n302 Group Child Care (30 months to school age)\n7717 19th Ave, Burnaby');
+addMarker(map,49.2200955,-122.9661243,'St. Francis de Sales Parish Before & After School Care\n(604) 435-5311\n305 Group Child Care (School Age)\n6656 Balmoral St, Burnaby');
+addMarker(map,49.2193408,-122.9648875,'St. Francis de Sales Preschool\n(604) 435-5311\n303 Preschool (30 months to school age)\n6681 Arcola St, Burnaby');
+addMarker(map,49.2236854,-122.9406049,'St. Matthews Day Care Society\n(604) 527-1031\n305 Group Child Care (School Age), 303 Preschool (30 months to school age), 301 Group Child Care (under 36 months), 302 Group Child Care (30 months to school age)\n103 - 7355 Canada Way, Burnaby');
+addMarker(map,49.2294908,-123.0025753,'Summerhill Montessori Preschool and Kindergarten\n(604) 294-0240\n302 Group Child Care (30 months to school age)\n1600 Cliff Ave (Old Church Building), Burnaby');
+addMarker(map,49.2148983,-123.0177024,'Suncrest Neighbourhood Care\n(604) 430-9562\n305 Group Child Care (School Age)\n3883 Rumble St, Burnaby');
+addMarker(map,49.2498302,-122.9353284,'Sunflower Daycare Centre Inc\n(604) 420-2604\n305 Group Child Care (School Age), 302 Group Child Care (30 months to school age)\n3821 Piper Ave, Burnaby');
+addMarker(map,49.2864237,-123.0032803,'Sunkids Family Childcare\n(604) 436-6205\n311 In-Home Multi-Age Child Care\n4467 Cambridge St, Burnaby');
+addMarker(map,49.2185470,-122.9407221,'Sunshine Bilingual Day Care\n(604) 520-2228\n304 Family Child Care\n7558 Mary Ave, Burnaby');
+addMarker(map,49.2158677,-122.9948675,'Swan Family Child Care\n(604) 438-2545\n304 Family Child Care\n4849 Irmin St, Burnaby');
+addMarker(map,49.2511205,-122.9189681,'Sweet Pea_s Daycare\n(604) 421-6838\n304 Family Child Care\n3585 Brighton Ave, Burnaby');
+addMarker(map,49.2394310,-122.9006126,'Tanys_s Daycare\n(604) 528-6169\n304 Family Child Care\n9176 Klenner Dr, Burnaby');
+addMarker(map,49.2089285,-122.9594912,'Taylor Park Children_s Centre (30 Months To School Age)\n(604) 520-6017\n302 Group Day Care >30 mos\n7500 Hanna Ct, Burnaby');
+addMarker(map,49.2089285,-122.9594912,'Taylor Park Children_s Centre (Under 36 Months)\n(604) 520-6046\n301 Group Day Care <36 mos\n7500 Hanna Ct, Burnaby');
+addMarker(map,49.2647427,-122.9177545,'The Grove Out of School Childcare Program\n(604) 420-5001\n305 Out of School Care, 302 Group Child Care (30 months to school age)\n8525 Forest Grove Dr, Burnaby');
+addMarker(map,49.2534378,-122.8941595,'Three Bears Daycare (30 Months to School Age)\n(604) 444-3302\n302 Group Child Care (30 months to school age)\n9887 Cameron St, Burnaby');
+addMarker(map,49.2088971,-122.9485250,'Tiny Toes Daycare\n(604) 777-9795\n304 Family Child Care\n7122 11th Ave, Burnaby');
+addMarker(map,49.2418869,-122.9796875,'Tiny Town Childcare Centre\n(604) 433-6110\n301 Group Day Care <36 mos, 302 Group Day Care >30 mos\n5747 Gilpin St, Burnaby');
+addMarker(map,49.2719091,-123.0022879,'Treasure Island Out of School Care II\n(604) 676-0557\n305 Out of School Care\n4550 Kitchener St, Burnaby');
+addMarker(map,49.2839676,-123.0187469,'Treasure Island School Age Care\n(604) 723-1837\n305 Group Child Care (School Age)\n3883 Triumph St, Burnaby');
+addMarker(map,49.2102261,-122.9742868,'Try & Go Montessori Kids_ School\n(604) 430-2869\n302 Group Day Care >30 mos\n6141 Ewart St, Burnaby');
+addMarker(map,49.2177125,-122.9345710,'Twelfth Avenue Neighbourhood Care\n(604) 431-0400\n305 Group Child Care (School Age)\n7622 12th Ave, Burnaby');
+addMarker(map,49.1990232,-122.9643934,'Unique Child Care Facility\n(604) 520-6159\n304 Family Child Care\n7135 10th Ave, Burnaby');
+addMarker(map,49.2789406,-122.9104441,'UniverCity Childcare\n(604) 291-7366\n302 Group Child Care (30 months to school age)\n9075 Highland Ct, Burnaby');
+addMarker(map,49.2510882,-122.9861667,'Variety Children_s Centre\n(604) 291-6568\n301 Group Child Care (under 36 months), 302 Group Child Care (30 months to school age)\n3755 Banff Ave, Burnaby');
+addMarker(map,49.2790330,-122.9063270,'Verdant Early Learning Centre\n(604) 291-3226\n301 Group Child Care (under 36 months)\n9191 University Cres, Burnaby');
+addMarker(map,49.2547776,-122.9082109,'Village Day Care\n(604) 421-3064\n302 Group Child Care (30 months to school age)\n3290 Ganymede Dr, Burnaby');
+addMarker(map,49.2708857,-122.9647327,'Vision Montessori Child Care Center\n(604) 420-1115\n302 Group Day Care >30 mos\n1435 Sperling Ave, Burnaby');
+addMarker(map,49.2570944,-122.9864772,'We Love and Care Family Day Care\n(604) 298-4721\n304 Family Child Care\n5356 Manor St, Burnaby');
+addMarker(map,49.2448510,-123.0209486,'Where The Wild Things Play Family Childcare\n(604) 616-7706\n304 Family Child Care\n3769 Fir St, Burnaby');
+addMarker(map,36.0605180,-75.7021390,'Willingdon Playschool\n(604) 430-1377\n303 Preschool\n1260 & 1265 - 4812 Willingdon Ave, Burnaby');
+addMarker(map,49.2218450,-122.9719470,'Windsor Childminding\n(604) 500-0492\n312 Child-minding\n6907 Gilley Ave, Burnaby');
+addMarker(map,49.2325442,-122.9991310,'Wonderland Family Daycare\n(604) 773-0417\n304 Family Child Care\n5749 Booth Ave, Burnaby');
+addMarker(map,49.2258097,-122.9971576,'YMCA Metrotown Child Care\n(604) 439-9618\n302 Group Child Care (30 months to school age), 301 Group Child Care (under 36 months)\n#489 - 4800 Kingsway, Burnaby');
+addMarker(map,49.2387728,-123.0170585,'Young Explorers\n(604) 439-7222\n304 Family Child Care\n3938 Brandon St, Burnaby');
+addMarker(map,49.2806318,-122.9901803,'Yu_s Montessori School in Burnaby\n(778) 371-8372\n302 Group Child Care (30 months to school age)\n380 Hythe Ave, Burnaby');
+addMarker(map,49.2646973,-122.9947307,'Yukon Crescent Children_s Centre\n(604) 294-3440\n301 Group Child Care (under 36 months), 302 Group Child Care (30 months to school age), 305 Group Child Care (School Age)\n2123 Yukon Crescent, Burnaby');
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div> Child Daycare in Burnaby, BC, Canada. Source from <a href="http://www.healthspace.ca/clients/fha/FHA_Website.nsf/CCFL-Child-List-All?OpenView&RestrictToCategory=23B11DF8A3C9C1E63649D5E3AD0748DC&Count=30">Fraser Health Authority</a>, updated on May 27 2014</div>
+    <div id="map_canvas" style="width:100%; height:95%"></div>
+  </body>
+</html>
