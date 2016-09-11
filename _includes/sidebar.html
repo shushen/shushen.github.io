@@ -1,12 +1,23 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>
+      <h2>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
+      </h2>
+      <p class="lead">{{ site.description }} &middot;
+        {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}">
+              <i class="fa fa-github fa-lg"></i>
+            </a> &middot;
+        {% endif %}
+        {% if site.linkedin_username %}
+            <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
+              <i class="fa fa-linkedin fa-lg"></i>
+            </a>
+        {% endif %}
+      </p>
     </div>
 
     <nav class="sidebar-nav">
@@ -26,7 +37,5 @@
       {% endfor %}
 
     </nav>
-
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
