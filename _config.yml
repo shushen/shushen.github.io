@@ -20,7 +20,7 @@ url: "http://www.wavether.com" # the base hostname & protocol for your site
 github_username:  shushen
 linkedin_username:  shushen
 
-baseurl: "/"
+baseurl: ""
 paginate: 5
 
 
